@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmation</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    defer
+  ></script>
+</head>
+
+<body>
+  <!-- Modal: Log In -->
+  <div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    aria-labelledby="loginModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- Email Input -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <span class="input-group-text"
+                  ><i class="bi bi-person"></i
+                ></span>
+              </div>
+            </div>
+            <!-- Password Input -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <span class="input-group-text"
+                  ><i class="bi bi-key"></i
+                ></span>
+              </div>
+            </div>
+            <!-- Remember Me -->
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="remember"
+              />
+              <label class="form-check-label" for="remember"
+                >Remember</label
+              >
+            </div>
+            <!-- Login Button -->
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary btn-sm">
+                Login
+              </button>
+            </div>
+            <!-- Sign Up Link -->
+            <p class="text-center mt-3">
+              Don't have an account?
+              <a
+                href="#"
+                class="text-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#signUpModal"
+                data-bs-dismiss="modal"
+                >Sign up here</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal: Sign Up -->
+  <div
+    class="modal fade"
+    id="signUpModal"
+    tabindex="-1"
+    aria-labelledby="signUpModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="col-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+            <div class="text-end mt-3">
+              <button type="submit" class="btn btn-success btn-sm">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="P01_index.html">
+        <img
+          src="images/logo.jpg"
+          class="img-fluid rounded-circle"
+          style="max-height: 75px;"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="P01_index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="P01_about_us.html">About us</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <select
+              class="form-select form-select-sm bg-dark text-white border-0"
+              id="exampleSelect"
+              onchange="if(this.value) window.location.href=this.value;"
+            >
+              <option selected>Products</option>
+              <option value="P01_cat_A.html">Categoria A</option>
+              <option value="P01_cat_B.html">Categoria B</option>
+            </select>
+          </li>
+        </ul>
+        <!-- Formulario de búsqueda -->
+        <form class="d-flex ms-3">
+          <input
+            class="form-control form-control-sm me-2"
+            type="search"
+            placeholder="Search products..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light btn-sm" type="submit">
+            Search
+          </button>
+        </form>
+        <!-- Botones Login y Carrito a la derecha -->
+        <div class="ms-auto d-flex">
+          <button
+            class="btn btn-outline-light me-2"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            <i class="bi bi-person"></i> Login
+          </button>
+          <a
+            href="P01_cart.html"
+            class="btn btn-outline-light btn-sm d-flex align-items-center"
+          >
+            <i class="bi bi-cart-fill me-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Order Confirmation</h1>
+
+    <div class="row">
+      <!-- Resumen de compra (columna izquierda) -->
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-header">Purchase Details</div>
+          <div class="card-body">
+            <!-- Lista de productos comprados (ejemplo) -->
+            <p><strong>Nike Air Max 270:</strong> 2 x 20.00 MXN</p>
+            <p><strong>ZoomX Vaporfly:</strong> 5 x 30.00 MXN</p>
+            <p><strong>Shipping cost:</strong> 60.00 MXN</p>
+            <hr />
+            <h5>Total: 250.00 MXN</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario de pago (columna derecha) -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Payment Method</div>
+          <div class="card-body">
+            <form action="P01_index.html">
+              <div class="mb-3">
+                <label for="cardName" class="form-label"
+                  >Cardholder Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardName"
+                  placeholder="Luis Del Valle"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="cardNumber" class="form-label"
+                  >Card Number</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="XXXX-XXXX-XXXX-XXXX"
+                  min="1000000000000000"
+                  max="9999999999999999"
+                  required
+                />
+              </div>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <label for="cardExpiry" class="form-label"
+                    >Expiration Date</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cardExpiry"
+                    placeholder="MM/YY"
+                    max="9999"
+                    required
+                  />
+                </div>
+                <div class="col-6 mb-3">
+                  <label for="cardCVV" class="form-label">CVV</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cardCVV"
+                    placeholder="123"
+                    min="100"
+                    max="999"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="P01_index.html" class="d-grid text-decoration-none">
+                  <input type="submit" class="btn btn-primary btn-lg" 
+                    value= "Confirm Payment"/>
+                </a>
+                <a href="P01_cart.html" class="d-grid w-100 text-decoration-none">
+                    <input type="button" class="btn btn-danger btn-lg" value="Return to cart"/>
+                </a>
+              </div>           
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
