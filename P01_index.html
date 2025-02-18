@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Principal</title>
+    <!-- Enlace para estilos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Enlace para usar íconos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Enlace para funciones javascript de Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Estilos propios-->
     <style>
         .carousel-image {
             max-height: 100%;
@@ -30,7 +33,7 @@
         }
     </style>
 
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -124,8 +127,10 @@
 </head>
 
 <body>
+    <!-- Nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+            <!-- Enlaces a otras paginas -->
             <a class="navbar-brand" href="P01_index.html">
                 <img src="images/logo.jpg" class="img-fluid rounded-circle" style="max-height: 75px;" />
             </a>
@@ -155,7 +160,7 @@
                         aria-label="Search">
                     <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
                 </form>
-                <!-- Botones Login y Carrito a la derecha -->
+                <!-- Botones Login y Carrito -->
                 <div class="ms-auto d-flex">
                     <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="bi bi-person"></i> Login
@@ -168,17 +173,18 @@
         </div>
     </nav>
 
+    <!-- Carrusel -->
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <!-- Primer elemento del carrusel -->
+            <!-- Primer imagen-->
             <div class="carousel-item active">
                 <img src="images/imagen_1.png" class="d-block w-100 carousel-image">
             </div>
-            <!-- Segundo elemento del carrusel -->
+            <!-- Segunda imagen -->
             <div class="carousel-item">
                 <img src="images/imagen_2.jpeg" class="d-block w-100 carousel-image">
             </div>
-            <!-- Tercer elemento del carrusel -->
+            <!-- Tercer imagen -->
             <div class="carousel-item">
                 <img src="images/imagen_3.jpg" class="d-block w-100 carousel-image">
             </div>
@@ -187,11 +193,9 @@
         <!-- Controles del carrusel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon custom-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon custom-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
         </button>
     </div>
 
@@ -242,7 +246,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 5 (Adidas) -->
+            <!-- Card 5 -->
             <div class="col">
                 <div class="card h-100">
                     <img src="images/card_5.jpeg.webp" class="card-img-top" alt="Adidas Ultraboost">
@@ -253,7 +257,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 6 (Adidas) -->
+            <!-- Card 6 -->
             <div class="col">
                 <div class="card h-100">
                     <img src="images/card_6.jpg.avif" class="card-img-top" alt="Adidas NMD">
@@ -264,7 +268,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 7 (Puma) -->
+            <!-- Card 7 -->
             <div class="col">
                 <div class="card h-100">
                     <img src="images/card_7.jpg" class="card-img-top" alt="Puma RS-X">
@@ -275,7 +279,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Card 8 (Puma) -->
+            <!-- Card 8 -->
             <div class="col">
                 <div class="card h-100">
                     <img src="images/card_8.avif" class="card-img-top" alt="Puma Suede">
@@ -288,7 +292,7 @@
             </div>
         </div>
 
-        <!-- Paginación estilo Google -->
+        <!-- Paginacion -->
         <nav aria-label="Page navigation" class="mt-4">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
